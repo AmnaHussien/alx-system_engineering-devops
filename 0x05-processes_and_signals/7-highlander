@@ -7,7 +7,7 @@ count=0
 while [ $count -ge 0 ]
 do
 	echo "To infinity and beyond"
-	if pkill -15
+	if pkill -15 7-highlander
 	then
 		echo "I am invincible!!!"
 	fi
