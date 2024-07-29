@@ -27,7 +27,7 @@ if __name__ == "__main__":
     todos_response = response.get(api_url + "todos", parms=parm)
     todos = todos_response.json()
     completed = []
-    for todo todos:
+    for todo in todos:
         if todos.get("completed") is True:
             completed.append(todo.get("title"))
     print("Employee {} is done with tasks({} / {})".format(user.get("name")),
