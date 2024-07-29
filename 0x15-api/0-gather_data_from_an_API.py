@@ -1,5 +1,9 @@
+#!/usr/bin/python3
+
 import requests
 import sys
 
 if __name__ == "__main__":
-    url = "https://jsonplaceholder.typicode.com/"
+    api_url = "https://jsonplaceholder.typicode.com/"
+    response = requests.get(api_url)
+    respose.json()
