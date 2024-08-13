@@ -22,7 +22,6 @@ def recurse(subreddit, hot_list=[], after="", count=0):
     Returns:
         list: list of post titles from the hot section of the subreddit
     """
-    
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
 
     headers = {
@@ -35,14 +34,11 @@ def recurse(subreddit, hot_list=[], after="", count=0):
         "limit": 100
     }
 
-
     response = requests.get(url, headers=headers, params=params,
                             allow_redirects=False)
 
-
     if response.status_code == 404:
         return (None)
-
     results = response.json().get("data")
     after = results.get("after")
     count += results.get("dist")
